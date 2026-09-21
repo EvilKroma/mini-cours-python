@@ -12,7 +12,7 @@
 2. Menu **Fichier > Ouvrir un dossier...** puis choisir le dossier du cours (celui qui contient les fichiers `01_...py`, `02_...py`, etc.).
 3. Les fichiers apparaissent à gauche. Un clic sur un fichier l'ouvre.
 
-## 2. Installer l'extension Python
+## 2. Installer l'extension Python (tu l'as déjà fait mais c'est à savoir)
 1. Cliquer sur l'icône **Extensions** à gauche (les 4 carrés), ou faire `Cmd+Shift+X`.
 2. Chercher **Python** (par Microsoft) et cliquer sur **Installer**.
 
@@ -23,7 +23,9 @@ Python n'est pas installé sur tout l'ordinateur : il est dans un **environnemen
 2. Faire `Cmd+Shift+P` : une barre s'ouvre en haut.
 3. Taper **Python: Select Interpreter** et valider.
 4. Dans la liste, choisir l'entrée qui mentionne l'environnement virtuel (par exemple `.venv` ou `venv`).
-5. Si elle n'apparaît pas : choisir **Enter interpreter path...** puis **Find...** et sélectionner le fichier `python` situé dans le dossier de l'environnement (dans le sous-dossier `bin`).
+5. Si elle n'apparaît pas (ou si la liste est vide) : ce n'est pas grave. Choisir **Enter interpreter path...** (toujours présent dans la liste), puis **Find...**, et sélectionner à la main le fichier `python` situé dans le dossier de l'environnement, sous-dossier `bin` (par exemple `Python/.venv/bin/python`).
+   - Un dossier dont le nom commence par un point (comme `.venv`) est masqué sur Mac. Dans la fenêtre de sélection, faire `Cmd+Shift+.` pour le faire apparaître.
+   - Si la commande **Python: Select Interpreter** n'existe pas, c'est que l'extension Python n'est pas installée : voir l'étape 2.
 
 Le Python choisi s'affiche en bas à droite de la fenêtre. Il doit mentionner le nom de l'environnement.
 
