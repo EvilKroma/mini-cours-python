@@ -16,30 +16,25 @@
 1. Cliquer sur l'icône **Extensions** à gauche (les 4 carrés), ou faire `Ctrl+Shift+X` (`Cmd+Shift+X` sur Mac).
 2. Chercher **Python** (par Microsoft) et cliquer sur **Installer**.
 
-## 3. Choisir le bon Python
-VS Code doit savoir quel Python utiliser.
+## 3. Choisir le bon Python : celui de l'environnement virtuel
+Python n'est pas installé sur tout l'ordinateur : il est dans un **environnement virtuel** (un "espace isolé" propre à ce projet, souvent un dossier nommé `venv` ou `.venv`). VS Code doit donc être réglé pour utiliser CE Python-là.
+
 1. Ouvrir un fichier `.py`.
 2. Faire `Ctrl+Shift+P` (`Cmd+Shift+P` sur Mac) : une barre s'ouvre en haut.
 3. Taper **Python: Select Interpreter** et valider.
-4. Choisir la version de Python la plus récente dans la liste (souvent marquée "Recommended").
+4. Dans la liste, choisir l'entrée qui mentionne l'environnement virtuel (par exemple `.venv` ou `venv`).
+5. Si elle n'apparaît pas : choisir **Enter interpreter path...** puis **Find...** et sélectionner le fichier `python` situé dans le dossier de l'environnement (dans `bin` sur Mac/Linux, dans `Scripts` sur Windows).
 
-Le Python choisi s'affiche en bas à droite de la fenêtre.
+Le Python choisi s'affiche en bas à droite de la fenêtre. Il doit mentionner le nom de l'environnement.
 
-## 4. (Optionnel) Activer un environnement virtuel
-Un environnement virtuel est un "espace isolé" pour un projet : il évite que les projets se mélangent. Pour ce cours, ce n'est pas obligatoire, mais c'est une bonne habitude.
+## 4. Activer l'environnement dans le terminal
+Dans le terminal de VS Code (menu **Terminal > Nouveau terminal**), l'environnement s'active souvent tout seul quand l'étape 3 est faite. On le voit quand `(venv)` ou `(.venv)` apparaît au début de la ligne.
 
-Dans le terminal de VS Code (menu **Terminal > Nouveau terminal**) :
-
-```
-python3 -m venv .venv
-```
-(sur Windows : `python -m venv .venv`)
-
-Puis l'activer :
+Sinon, l'activer à la main (en adaptant le chemin si l'environnement est ailleurs) :
 - Mac / Linux : `source .venv/bin/activate`
 - Windows : `.venv\Scripts\activate`
 
-Quand c'est activé, `(.venv)` apparaît au début de la ligne du terminal. Si VS Code propose d'utiliser ce nouvel environnement, accepter. Sinon, refaire l'étape 3 et choisir celui qui contient `.venv`.
+Une fois activé, la commande `python` utilise le bon Python. Pour le quitter : `deactivate`.
 
 ## 5. Exécuter un fichier
 ### Méthode 1 : la flèche
@@ -51,7 +46,7 @@ Ouvrir un terminal (**Terminal > Nouveau terminal**) et écrire :
 ```
 python 01_Entrée_Sortie.py
 ```
-(sur Mac, si ça ne marche pas : `python3 01_Entrée_Sortie.py`)
+(l'environnement doit être activé, voir l'étape 4)
 
 Astuce : écrire les premières lettres du nom du fichier puis appuyer sur `Tab` complète le nom automatiquement.
 
