@@ -27,7 +27,7 @@ Python n'est pas installé sur tout l'ordinateur : il est dans un **environnemen
    - Un dossier dont le nom commence par un point (comme `.venv`) est masqué sur Mac. Dans la fenêtre de sélection, faire `Cmd+Shift+.` pour le faire apparaître.
    - Si la commande **Python: Select Interpreter** n'existe pas, c'est que l'extension Python n'est pas installée : voir l'étape 2.
 
-Le Python choisi s'affiche en bas à droite de la fenêtre. Il doit mentionner le nom de l'environnement.
+Tant qu'un fichier `.py` est ouvert, le Python choisi s'affiche dans la barre du bas, à droite (par exemple `3.14.0 (.venv)`). Il doit mentionner le nom de l'environnement. Un clic dessus rouvre la liste pour en changer.
 
 ## 4. Activer l'environnement dans le terminal
 Dans le terminal de VS Code (menu **Terminal > Nouveau terminal**), l'environnement s'active souvent tout seul quand l'étape 3 est faite. On le voit quand `(venv)` ou `(.venv)` apparaît au début de la ligne.
