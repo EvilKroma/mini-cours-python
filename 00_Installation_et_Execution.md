@@ -13,17 +13,17 @@
 3. Les fichiers apparaissent à gauche. Un clic sur un fichier l'ouvre.
 
 ## 2. Installer l'extension Python
-1. Cliquer sur l'icône **Extensions** à gauche (les 4 carrés), ou faire `Ctrl+Shift+X` (`Cmd+Shift+X` sur Mac).
+1. Cliquer sur l'icône **Extensions** à gauche (les 4 carrés), ou faire `Cmd+Shift+X`.
 2. Chercher **Python** (par Microsoft) et cliquer sur **Installer**.
 
 ## 3. Choisir le bon Python : celui de l'environnement virtuel
 Python n'est pas installé sur tout l'ordinateur : il est dans un **environnement virtuel** (un "espace isolé" propre à ce projet, souvent un dossier nommé `venv` ou `.venv`). VS Code doit donc être réglé pour utiliser CE Python-là.
 
 1. Ouvrir un fichier `.py`.
-2. Faire `Ctrl+Shift+P` (`Cmd+Shift+P` sur Mac) : une barre s'ouvre en haut.
+2. Faire `Cmd+Shift+P` : une barre s'ouvre en haut.
 3. Taper **Python: Select Interpreter** et valider.
 4. Dans la liste, choisir l'entrée qui mentionne l'environnement virtuel (par exemple `.venv` ou `venv`).
-5. Si elle n'apparaît pas : choisir **Enter interpreter path...** puis **Find...** et sélectionner le fichier `python` situé dans le dossier de l'environnement (dans `bin` sur Mac/Linux, dans `Scripts` sur Windows).
+5. Si elle n'apparaît pas : choisir **Enter interpreter path...** puis **Find...** et sélectionner le fichier `python` situé dans le dossier de l'environnement (dans le sous-dossier `bin`).
 
 Le Python choisi s'affiche en bas à droite de la fenêtre. Il doit mentionner le nom de l'environnement.
 
@@ -31,8 +31,10 @@ Le Python choisi s'affiche en bas à droite de la fenêtre. Il doit mentionner l
 Dans le terminal de VS Code (menu **Terminal > Nouveau terminal**), l'environnement s'active souvent tout seul quand l'étape 3 est faite. On le voit quand `(venv)` ou `(.venv)` apparaît au début de la ligne.
 
 Sinon, l'activer à la main (en adaptant le chemin si l'environnement est ailleurs) :
-- Mac / Linux : `source .venv/bin/activate`
-- Windows : `.venv\Scripts\activate`
+
+```
+source .venv/bin/activate
+```
 
 Une fois activé, la commande `python` utilise le bon Python. Pour le quitter : `deactivate`.
 
